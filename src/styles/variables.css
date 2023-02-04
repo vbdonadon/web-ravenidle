@@ -1,0 +1,45 @@
+:root {
+  --navbar-color: rgba(19, 20, 22, 0.78);
+  --navbar-color-logo: rgba(19, 20, 22, 0.88);
+  --navbar-border-color: #707070;
+
+  --font-family-title: "Caudex", Arial, Helvetica, sans-serif;
+  --font-family-paragraph: "Open Sans", sans-serif;
+
+  --white: #fff;
+  --lightest-gray: #ced2d9;
+  --light-gray: #a6aab2;
+  --md-gray: #3a3d43;
+  --gray: #707070;
+  --blue: #5da4fb;
+  --dark-gray: #1a1c1e;
+  --black: #060b11;
+  --green: #77d463;
+  --yellow: #fbc321;
+  --purple: #a556ff;
+  --gray-opacity: rgba(31, 33, 36, 0.7);
+  --light-gray-opacity-medium: rgba(166, 170, 178, 0.5);
+  --light-gray-opacity-light: rgba(166, 170, 178, 0.25);
+  --green-opacity-medium: rgba(119, 212, 99, 0.5);
+  --green-opacity-light: rgba(119, 212, 99, 0.25);
+  --yellow-opacity-medium: rgba(251, 195, 33, 0.5);
+  --yellow-opacity-light: rgba(251, 195, 33, 0.25);
+  --purple-opacity-medium: rgba(200, 150, 255, 0.5);
+  --purple-opacity-light: rgba(165, 86, 255, 0.25);
+  --white-opacity-medium: rgba(255, 255, 255, 0.5);
+  --white-opacity-light: rgba(255, 255, 255, 0.25);
+  --archetype-archery: #a6fe31;
+  --archetype-spiritual: #ff5151;
+  --archetype-warfare: #ff5e00;
+  --archetype-holy: #f9f9ba;
+  --archetype-witchcraft: #0052a2;
+  --archetype-wizardry: #5d0195;
+  --archetype-protection: #fffb00;
+  --archetype-shadow: #ce60be;
+  --sidebar-maximum-width: 250px;
+  --sidebar-minimum-width: 50px;
+  --sidebar-current-width: 250px;
+  --navbar-current-height: 109px;
+  --media-laptop: 1024px;
+  --media-tablet: 768px;
+}

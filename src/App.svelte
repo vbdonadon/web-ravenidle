@@ -1,8 +1,17 @@
 <script lang="ts">
-  console.log("It works!");
+  import Navbar from "./lib/Navbar.svelte";
 </script>
 
-<main>RavenIdle Basic Structure</main>
+<Navbar />
 
 <style>
+  :global(*) {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  :global(*) {
+  }
 </style>
