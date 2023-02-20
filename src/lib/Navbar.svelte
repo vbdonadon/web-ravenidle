@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 </script>
 
 <nav id="nav">
