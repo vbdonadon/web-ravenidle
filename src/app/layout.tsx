@@ -1,5 +1,6 @@
-import '@/styles/global.css'
-import '@/styles/colors.css'
+"use client"
+
+import { GlobalStyles } from '@/styles/global'
 
 export const metadata = {
   title: 'Create Next App',
@@ -13,6 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <GlobalStyles />
       <body>{children}</body>
     </html>
   )

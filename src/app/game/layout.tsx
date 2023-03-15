@@ -1,6 +1,10 @@
+"use client"
+
 import TheSidebar from "@/components/TheSidebar"
 
-import styles from './styles.module.css';
+import mock from "./data";
+
+import * as S from './styles';
 
 type GameLayoutProps = {
   children: React.ReactNode
@@ -9,12 +13,10 @@ type GameLayoutProps = {
 const GameLayout = ({
   children
 }: GameLayoutProps) => {
-
-
   return (  
     <>
-      <TheSidebar />
-      <div className={styles.container}>{children}</div>
+      <TheSidebar data={mock} />
+      <S.Container>{children}</S.Container>
     </>
   );
 }
