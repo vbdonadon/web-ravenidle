@@ -14,15 +14,15 @@ const data: SidebarProps[] = [
     menu: [
       {
         name: 'Character',
-        url: '/character'
+        url: '/game/character'
       },
       {
         name: 'Archetypes',
-        url: '/archetypes'
+        url: '/game/archetypes'
       },
       {
         name: 'Inventory',
-        url: '/inventory'
+        url: '/game/inventory'
       }
     ]
   },
@@ -31,15 +31,15 @@ const data: SidebarProps[] = [
     menu: [
       {
         name: 'Creatures',
-        url: '/creatures'
+        url: '/game/creatures'
       },
       {
         name: 'Dungeons',
-        url: '/dungeons'
+        url: '/game/dungeons'
       },
       {
         name: 'Tradepacks',
-        url: '/tradepacks'
+        url: '/game/tradepacks'
       }
     ]
   },
@@ -48,19 +48,19 @@ const data: SidebarProps[] = [
     menu: [
       {
         name: 'Equipaments',
-        url: '/equipaments'
+        url: '/game/equipaments'
       },
       {
         name: 'Weapons',
-        url: '/weapons'
+        url: '/game/weapons'
       },
       {
         name: 'Potions',
-        url: '/potions'
+        url: '/game/potions'
       },
       {
         name: 'Cassino',
-        url: '/cassino'
+        url: '/game/cassino'
       }
     ]
   }

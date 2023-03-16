@@ -1,5 +1,6 @@
-import { SidebarProps } from "@/app/game/data";
 import Link from "next/link";
+
+import { SidebarProps } from "@/app/game/data";
 
 type TheSidebarProps = {
   data: SidebarProps[]
@@ -18,17 +19,17 @@ const TheSidebar = ({ data }: TheSidebarProps) => {
       />
 
       <S.List>
-        {data.map((menu, id) => (
-          <>
-            <S.ListItem key={id}>{menu.title}</S.ListItem>
+        {data.map((menu, menuId) => (
+          <div key={menuId}>
+            <S.ListItem>{menu.title}</S.ListItem>
             <S.Sublist>
-              {menu.menu.map((submenu, id) => (
-                <S.SublistItem key={id}>
+              {menu.menu.map((submenu, submenuId) => (
+                <S.SublistItem key={submenuId}>
                   <Link href={submenu.url}>{submenu.name}</Link>
                 </S.SublistItem>
               ))}
             </S.Sublist>
-          </>
+          </div>
         ))}
       </S.List>
     </S.Container>
