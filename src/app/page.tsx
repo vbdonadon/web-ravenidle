@@ -1,5 +1,14 @@
+'use client'
+
+import BaseAttributes from '@/components/BaseAttributes'
+
+import * as S from './styles'
+
 export default function Home() {
   return (
-    <h1>Welcome to RavenIdle!</h1>
+    <>
+      <S.Title>Welcome to RavenIdle!</S.Title>
+      <BaseAttributes />
+    </>
   )
 }
