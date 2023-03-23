@@ -1,3 +1,5 @@
+"use client"
+
 import * as Icons from './icons';
 import { IconProps } from './icons';
 
