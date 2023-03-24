@@ -1,20 +1,25 @@
 "use client"
 
 import { useEffect, useState } from 'react';
+import {  CHARACTER } from '@/types/Character';
 
 import GET from '@/services/Character/GET';
+import UPDATE from '@/services/Character/UPDATE';
 
 import * as S from './styles';
-import {  CHARACTER } from '@/types/Character';
 
 const BaseAttributes = () => {
   const [character, setCharacter] = useState<CHARACTER>()
-  const [currentAttribute, setCurrentAttribute] = useState<number>(0);
+  const [availableAttribute, setAvailableAttribute] = useState<number>(0);
+
+  const UPDATE_ATTRIBUTE = (event: any) => {
+    event.preventDefault();
+    console.log("UPDATE_ATTRIBUTE")
+  }
 
   useEffect(() => {
     (async () => {
       await setCharacter(await GET.GET_CHARACTER())
-      await setCurrentAttribute((await GET.GET_CHARACTER()).attribute_points)
     })()
   }, [])
   
@@ -22,7 +27,7 @@ const BaseAttributes = () => {
     <S.Container>
       <S.Column>
         <S.Title>Primary Attributes</S.Title>
-        <S.AttributeList>
+        <S.AttributeList onSubmit={() => UPDATE_ATTRIBUTE(event)}>
           {character?.character_attributes.map(attribute => (
             <S.AttributeItem key={attribute.id}>
               <S.AttributeName>
@@ -32,16 +37,14 @@ const BaseAttributes = () => {
                 {attribute.attributes.name}
               </S.AttributeName>
 
-              <S.AttributeValue>
-                {attribute.attribute_value}
-              </S.AttributeValue>
+              <S.AttributeValue value={attribute.attribute_value} readOnly />
               
               <S.Buttons>              
-                <S.Button>
+                <S.Button type='button' disabled={!!character.attribute_points}>
                   + 
                 </S.Button>
 
-                <S.Button>
+                <S.Button type='button'>
                   -
                 </S.Button>
               </S.Buttons>
@@ -49,7 +52,7 @@ const BaseAttributes = () => {
           ))}
           
           <S.AttributeItem>
-          Points Available: <span>{currentAttribute}</span>
+            Points Available: <span>{character?.attribute_points}</span>
           </S.AttributeItem>
         </S.AttributeList>
       </S.Column>
