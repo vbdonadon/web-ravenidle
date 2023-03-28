@@ -16,9 +16,9 @@ export const Title = styled.strong`
   font-size: 20px;
 `
 
-export const AttributeList = styled.form``
+export const AttributeForm = styled.form``
 
-export const AttributeItem = styled.li`
+export const AttributeItem = styled.div`
   ${CAUDEX_REGULAR.style};
   color: ${theme.primary.neutral.white};
   padding: 28px 0px 29px 0px;
@@ -178,4 +178,33 @@ export const AttributeValue = styled.input<AttributeValueProps>`
 export const Image = styled.img`
   max-width: 32px;
   width: 100%;
+`
+
+export const WrapperAttributeItem = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+  gap: 12px;
+
+  button {
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    color: #FFC670;
+    width: 42px;
+    height: 42px;
+    background-color: ${theme.primary.brand.secondary};
+    border-radius: 4px;
+    ${CAUDEX_BOLD.style};
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 18px;
+    }
+  }
 `

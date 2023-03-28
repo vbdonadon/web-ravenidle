@@ -22,6 +22,7 @@ type CHARACTER_ARCHETYPE = {
 
 type CHARACTER_ATTRIBUTE = {
   id: string;
+  attribute_name: string;
   attribute_value: number;
   attributes: {
     id: string;
