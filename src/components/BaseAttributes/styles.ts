@@ -5,7 +5,7 @@ import { CAUDEX_REGULAR, POPPINS_MEDIUM, POPPINS_LIGHT, CAUDEX_BOLD } from "@/st
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 29px;
 `
 
@@ -172,7 +172,11 @@ export const AttributeValue = styled.input<AttributeValueProps>`
   ${CAUDEX_REGULAR.style};
   font-size: 20px;
   line-height: 0px;
-  color: ${props => props.updatedAttribute ? theme.primary.support.tertiary : theme.primary.neutral.white};
+  color: ${theme.primary.neutral.white};
+
+  &.valueChange {
+    color: #FFC670;
+  }
 `
 
 export const Image = styled.img`

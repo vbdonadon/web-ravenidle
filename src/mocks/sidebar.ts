@@ -15,17 +15,17 @@ const data: SidebarProps[] = [
     menu: [
       {
         name: 'Character',
-        url: '/game/character',
+        url: '/',
         icon: '/icons/character-icon.svg'
       },
       {
         name: 'Archetypes',
-        url: '/game/archetypes',
+        url: '/archetypes',
         icon: '/icons/character-icon.svg'
       },
       {
         name: 'Inventory',
-        url: '/game/inventory',
+        url: '/inventory',
         icon: '/icons/character-icon.svg'
       }
     ]
@@ -35,17 +35,17 @@ const data: SidebarProps[] = [
     menu: [
       {
         name: 'Creatures',
-        url: '/game/creatures',
+        url: '/creatures',
         icon: '/icons/character-icon.svg'
       },
       {
         name: 'Dungeons',
-        url: '/game/dungeons',
+        url: '/dungeons',
         icon: '/icons/character-icon.svg'
       },
       {
         name: 'Tradepacks',
-        url: '/game/tradepacks',
+        url: '/tradepacks',
         icon: '/icons/character-icon.svg'
       }
     ]
@@ -55,22 +55,22 @@ const data: SidebarProps[] = [
     menu: [
       {
         name: 'Equipaments',
-        url: '/game/equipaments',
+        url: '/equipaments',
         icon: '/icons/character-icon.svg'
       },
       {
         name: 'Weapons',
-        url: '/game/weapons',
+        url: '/weapons',
         icon: '/icons/character-icon.svg'
       },
       {
         name: 'Potions',
-        url: '/game/potions',
+        url: '/potions',
         icon: '/icons/character-icon.svg'
       },
       {
         name: 'Cassino',
-        url: '/game/cassino',
+        url: '/cassino',
         icon: '/icons/character-icon.svg'
       }
     ]

@@ -4,6 +4,14 @@ import styled from "styled-components";
 
 import { theme } from "@/styles/theme";
 
+export const Controller = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: stretch;
+  gap: 16px;
+`
+
 export const Container = styled.div`
   background-color: ${theme.primary.brand.default};
   padding: 32px 32px 32px 32px;
@@ -65,7 +73,7 @@ export const Manabar = styled.div`
   color: ${theme.primary.brand.secondary};
   font-size: 16px;
 
-  margin: 0px 0px 18px;
+  margin: 0px 0px 46px;
 `
 
 export const OverallStatus = styled.div`
@@ -111,4 +119,19 @@ export const ValueName = styled.strong`
   color: ${theme.primary.neutral.white};
   text-align: center;
   border: 1px solid linear-gradient(267.56deg, rgba(207, 126, 254, 0.3) -5.55%, rgba(207, 126, 254, 0) 90.04%);
+`
+
+export const EquipamentList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+`
+
+export const EquipamentItem = styled.li`
+  background-color: ${theme.primary.brand.default};
+  border-radius: 4px;
+  width: 112px;
+  height: 112px;
 `

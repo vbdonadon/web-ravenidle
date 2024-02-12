@@ -82,6 +82,7 @@ const BaseAttributes = () => {
         response.character_attributes.find(attribute => attribute.attribute_name == 'INTELLIGENCE' && setCurrentIntelligence({ currentValue: attribute.attribute_value, plusValue: currentMight.plusValue }))
         response.character_attributes.find(attribute => attribute.attribute_name == 'DEXTERITY' && setCurrentDexterity({ currentValue: attribute.attribute_value, plusValue: currentMight.plusValue }))
         response.character_attributes.find(attribute => attribute.attribute_name == 'WISDOM' && setCurrentWisdom({ currentValue: attribute.attribute_value, plusValue: currentMight.plusValue }))
+
         setAvailablePoints(response.attribute_points)
         setUsedPoints(response.attribute_points)
       })
@@ -101,7 +102,7 @@ const BaseAttributes = () => {
                 MIGHT
               </S.AttributeName>
 
-              <S.AttributeValue name="might" value={currentMight.currentValue + currentMight.plusValue} readOnly />
+              <S.AttributeValue name="might" value={currentMight.currentValue + currentMight.plusValue} className={currentMight.plusValue > 0 ? 'valueChange' : ''} readOnly />
               
               <S.Buttons>              
                 <S.Button type='button' onClick={() => {
@@ -134,7 +135,7 @@ const BaseAttributes = () => {
                 INTELLIGENCE
               </S.AttributeName>
 
-              <S.AttributeValue name="intelligence" value={currentIntelligence.currentValue + currentIntelligence.plusValue} readOnly />
+              <S.AttributeValue name="intelligence" value={currentIntelligence.currentValue + currentIntelligence.plusValue} className={currentIntelligence.plusValue > 0 ? 'valueChange' : ''} readOnly />
               
               <S.Buttons>              
                 <S.Button type='button' onClick={() => {
@@ -167,7 +168,7 @@ const BaseAttributes = () => {
                 DEXTERITY
               </S.AttributeName>
 
-              <S.AttributeValue name="dexterity" value={currentDexterity.currentValue + currentDexterity.plusValue} readOnly />
+              <S.AttributeValue name="dexterity" value={currentDexterity.currentValue + currentDexterity.plusValue} className={currentDexterity.plusValue > 0 ? 'valueChange' : ''} readOnly />
               
               <S.Buttons>              
                 <S.Button type='button' onClick={() => {
@@ -200,9 +201,9 @@ const BaseAttributes = () => {
                 WISDOM
               </S.AttributeName>
 
-              <S.AttributeValue name="wisdom" value={currentWisdom.currentValue + currentWisdom.plusValue} readOnly />
+              <S.AttributeValue name="wisdom" value={currentWisdom.currentValue + currentWisdom.plusValue} className={currentWisdom.plusValue > 0 ? 'valueChange' : ''} readOnly />
               
-              <S.Buttons>              
+              <S.Buttons>        
                 <S.Button type='button' onClick={() => {
                   if (usedPoints > 0 && currentWisdom.plusValue >= 0) {
                     setCurrentWisdom({ currentValue: currentWisdom.currentValue, plusValue: currentWisdom.plusValue + 1 })
@@ -259,7 +260,7 @@ const BaseAttributes = () => {
                 </S.Value>
 
                 <S.Value>
-                  0
+                  {secondary.status_value}
                 </S.Value>
               </S.Values>
             </S.SecondaryItem>
